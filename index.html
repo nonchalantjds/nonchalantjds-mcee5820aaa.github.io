@@ -67,22 +67,6 @@
             max-height: 500px; /* Adjust as needed */
             transition: max-height 0.7s ease-in;
         }
-        .gemini-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s;
-        }
-        .gemini-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        .loader {
-            display: none;
-        }
-        .loader.active {
-            display: flex;
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -156,26 +140,6 @@
                     </div>
                 </div>
             </div>
-             <!-- Gemini API Feature: Latest News -->
-            <div class="mt-12 bg-slate-50 p-6 rounded-xl shadow-inner">
-                <h4 class="text-xl font-semibold text-center mb-4 text-[#2C5F2D]">Get the Latest News & Analysis</h4>
-                <p class="text-center text-slate-600 mb-6 max-w-2xl mx-auto">Click the button below to get a real-time summary of the most recent developments in China's solar industry, powered by the Gemini API with Google Search.</p>
-                <div class="text-center">
-                    <button id="getNewsBtn" class="gemini-btn bg-[#B48A3D] text-white font-bold py-2 px-6 rounded-lg hover:bg-[#a37a30]">
-                        <span>✨</span> Fetch Latest Intel
-                    </button>
-                </div>
-                <div id="newsResult" class="mt-6 hidden">
-                    <div id="newsLoader" class="loader justify-center items-center">
-                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#B48A3D]"></div>
-                    </div>
-                    <div id="newsContent" class="prose max-w-none text-slate-700 bg-white p-4 rounded-md"></div>
-                    <div id="newsSources" class="mt-4 hidden">
-                        <h5 class="font-semibold text-slate-800">Sources:</h5>
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-1"></ul>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Section 3: Potential for Further Exploitation -->
@@ -185,45 +149,29 @@
                 <p class="mt-2 text-md text-slate-500 max-w-2xl mx-auto">Despite record-breaking achievements, China has only begun to tap into its immense solar potential. This section explores the strategic drivers—government ambition, economic incentives, and vast geographical resources—that ensure solar development will continue its aggressive upward trajectory, securing future energy independence and economic leadership.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-                <div class="p-6 bg-slate-50 rounded-lg potential-point">
+                <div class="p-6 bg-slate-50 rounded-lg">
                     <h4 class="text-xl font-semibold text-[#2C5F2D] mb-2">Ambitious National Targets</h4>
                     <p class="text-slate-600">The upcoming 15th Five-Year Plan (2026-2030) is projected to mandate an annual increase of 200-300 GW in renewable capacity. China has already surpassed its 2030 renewable targets six years ahead of schedule, demonstrating a pattern of under-promising and over-delivering.</p>
                 </div>
-                <div class="p-6 bg-slate-50 rounded-lg potential-point">
+                <div class="p-6 bg-slate-50 rounded-lg">
                     <h4 class="text-xl font-semibold text-[#2C5F2D] mb-2">Economic Powerhouse</h4>
                     <p class="text-slate-600">Clean energy sectors contributed a record 13.6 trillion yuan ($1.9tn) to China's economy in 2024, driving a quarter of its GDP growth. Solar is a primary engine of this growth, creating jobs, attracting investment, and generating significant export revenue.</p>
                 </div>
-                <div class="p-6 bg-slate-50 rounded-lg potential-point">
+                <div class="p-6 bg-slate-50 rounded-lg">
                     <h4 class="text-xl font-semibold text-[#2C5F2D] mb-2">Vast Land & Resources</h4>
                     <p class="text-slate-600">Expansive deserts in western and northern China, like the Gobi Desert, offer unparalleled land availability for massive utility-scale solar farms. This geographical advantage allows for projects on a scale unimaginable in many other nations, with clear potential for further expansion.</p>
                 </div>
-                <div class="p-6 bg-slate-50 rounded-lg potential-point">
+                <div class="p-6 bg-slate-50 rounded-lg">
                     <h4 class="text-xl font-semibold text-[#2C5F2D] mb-2">Energy Security Imperative</h4>
                     <p class="text-slate-600">Reducing reliance on volatile foreign fossil fuel markets is a core strategic goal. Every gigawatt of solar installed domestically strengthens China's energy independence and insulates its economy from geopolitical shocks.</p>
                 </div>
-                 <div class="p-6 bg-slate-50 rounded-lg potential-point">
+                 <div class="p-6 bg-slate-50 rounded-lg">
                     <h4 class="text-xl font-semibold text-[#2C5F2D] mb-2">Decentralized Energy Growth</h4>
                     <p class="text-slate-600">Beyond massive solar farms, there is enormous potential in distributed solar—rooftop panels on residential, commercial, and industrial buildings. This "solar everywhere" approach enhances grid resilience and empowers local communities.</p>
                 </div>
-                 <div class="p-6 bg-slate-50 rounded-lg potential-point">
+                 <div class="p-6 bg-slate-50 rounded-lg">
                     <h4 class="text-xl font-semibold text-[#2C5F2D] mb-2">Global Market Leadership</h4>
                     <p class="text-slate-600">By continuing to scale up domestic deployment, China drives down global costs, making solar energy more affordable for all nations. This solidifies its role as an indispensable leader in the global energy transition.</p>
-                </div>
-            </div>
-            <!-- Gemini API Feature: Generate Talking Points -->
-            <div class="mt-8 pt-8 border-t border-slate-200 px-6">
-                <h4 class="text-xl font-semibold text-center mb-4 text-[#2C5F2D]">Brainstorm More Arguments</h4>
-                <p class="text-center text-slate-600 mb-6 max-w-2xl mx-auto">Need more firepower for your debate? Use the Gemini API to generate additional talking points based on the arguments above.</p>
-                <div class="text-center">
-                    <button id="getPointsBtn" class="gemini-btn bg-[#2C5F2D] text-white font-bold py-2 px-6 rounded-lg hover:bg-[#3A7D44]">
-                        <span>✨</span> Generate New Talking Points
-                    </button>
-                </div>
-                <div id="pointsResult" class="mt-6 hidden">
-                    <div id="pointsLoader" class="loader justify-center items-center">
-                         <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#2C5F2D]"></div>
-                    </div>
-                    <div id="pointsContent" class="prose max-w-none text-slate-700 bg-slate-50 p-4 rounded-md"></div>
                 </div>
             </div>
         </section>
@@ -325,112 +273,6 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const API_KEY = ""; 
-            const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
-            
-            // Gemini API call function
-            async function callGemini(prompt, useSearchGrounding = false) {
-                const payload = {
-                    contents: [{ parts: [{ text: prompt }] }],
-                };
-
-                if (useSearchGrounding) {
-                    payload.tools = [{ "google_search": {} }];
-                }
-
-                try {
-                    const response = await fetch(API_URL, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) {
-                        throw new Error(`API call failed with status: ${response.status}`);
-                    }
-                    return await response.json();
-                } catch (error) {
-                    console.error("Gemini API call error:", error);
-                    return { error: "Failed to fetch data from the API. Please check the console for details." };
-                }
-            }
-            
-            // Get News Feature
-            const getNewsBtn = document.getElementById('getNewsBtn');
-            const newsResultDiv = document.getElementById('newsResult');
-            const newsLoader = document.getElementById('newsLoader');
-            const newsContentDiv = document.getElementById('newsContent');
-            const newsSourcesDiv = document.getElementById('newsSources');
-            const newsSourcesList = newsSourcesDiv.querySelector('ul');
-
-            getNewsBtn.addEventListener('click', async () => {
-                getNewsBtn.disabled = true;
-                newsResultDiv.style.display = 'block';
-                newsLoader.classList.add('active');
-                newsContentDiv.innerHTML = '';
-                newsSourcesDiv.style.display = 'none';
-                newsSourcesList.innerHTML = '';
-
-                const prompt = "In a concise summary, what are the latest news, statistics, and policy updates regarding China's solar energy development in 2025? Focus on information from the last 3-6 months. Present the key findings as a few clear bullet points in markdown format.";
-                const result = await callGemini(prompt, true);
-                
-                newsLoader.classList.remove('active');
-
-                if (result.error) {
-                    newsContentDiv.innerHTML = `<p class="text-red-600">${result.error}</p>`;
-                } else {
-                    const candidate = result.candidates?.[0];
-                    const text = candidate?.content?.parts?.[0]?.text || "No content returned.";
-                    newsContentDiv.innerHTML = text.replace(/\*/g, '•');
-
-                    const groundingMetadata = candidate?.groundingMetadata;
-                    if (groundingMetadata?.groundingAttributions) {
-                        const sources = groundingMetadata.groundingAttributions
-                            .map(attr => ({ uri: attr.web?.uri, title: attr.web?.title }))
-                            .filter(s => s.uri && s.title);
-                        
-                        if(sources.length > 0) {
-                            sources.forEach(source => {
-                                const li = document.createElement('li');
-                                li.innerHTML = `<a href="${source.uri}" target="_blank" class="text-blue-600 hover:underline">${source.title}</a>`;
-                                newsSourcesList.appendChild(li);
-                            });
-                            newsSourcesDiv.style.display = 'block';
-                        }
-                    }
-                }
-                getNewsBtn.disabled = false;
-            });
-
-            // Get Talking Points Feature
-            const getPointsBtn = document.getElementById('getPointsBtn');
-            const pointsResultDiv = document.getElementById('pointsResult');
-            const pointsLoader = document.getElementById('pointsLoader');
-            const pointsContentDiv = document.getElementById('pointsContent');
-
-            getPointsBtn.addEventListener('click', async () => {
-                getPointsBtn.disabled = true;
-                pointsResultDiv.style.display = 'block';
-                pointsLoader.classList.add('active');
-                pointsContentDiv.innerHTML = '';
-
-                const existingPoints = Array.from(document.querySelectorAll('.potential-point h4')).map(h4 => h4.textContent.trim()).join(', ');
-                const prompt = `You are a world-class debate coach. Based on these existing arguments for China's solar potential: "${existingPoints}", generate three new, distinct, and compelling talking points. Each point should have a clear title (as a markdown heading) and a short, powerful explanation. Do not repeat the existing points.`;
-                
-                const result = await callGemini(prompt, false);
-
-                pointsLoader.classList.remove('active');
-
-                if (result.error) {
-                    pointsContentDiv.innerHTML = `<p class="text-red-600">${result.error}</p>`;
-                } else {
-                    const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "No new points generated.";
-                    pointsContentDiv.innerHTML = text.replace(/###\s/g, '<h4 class="text-lg font-semibold text-[#2C5F2D] mt-4 mb-1">').replace(/\*\*/g, '');
-                }
-                getPointsBtn.disabled = false;
-            });
-
-
             // Animate stats on scroll
             const animateValue = (obj, start, end, duration) => {
                 let startTimestamp = null;
